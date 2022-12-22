@@ -1,0 +1,7 @@
+.gradient-custom-3{
+  background: rgb(189,222,208);
+  background: -moz-linear-gradient(308deg, rgba(189,222,208,1) 23%, rgba(0,181,255,1) 40%, rgba(236,206,206,0.9948354341736695) 85%);
+  background: -webkit-linear-gradient(308deg, rgba(189,222,208,1) 23%, rgba(0,181,255,1) 40%, rgba(236,206,206,0.9948354341736695) 85%);
+  background: linear-gradient(308deg, rgba(189,222,208,1) 23%, rgba(0,181,255,1) 40%, rgba(236,206,206,0.9948354341736695) 85%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bdded0",endColorstr="#eccece",GradientType=1);
+}

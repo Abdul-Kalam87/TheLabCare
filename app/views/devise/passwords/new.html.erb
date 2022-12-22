@@ -1,0 +1,55 @@
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<div id="layoutAuthentication">
+  <div id="layoutAuthentication_content">
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-lg mt-5"><div class="text-center p-md-5 mx-md-5"><%= image_tag "logo.jpg", style: 'width: 185px;max-width:185px',class: 'rounded img-fluid' %></div>
+            <div class="card-header"><h3 class="text-center font-weight-light my-4">Password Recovery</h3></div>
+            <div class="card-body">
+              <div class="small mb-3 text-muted">Enter your email address and we will send you a link to reset your password.</div>
+              <form>
+                <div class="form-floating mb-3">
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control', id: 'emailLabel', placeholder: 'Email'%>
+                  <label for="emailLabel">Email address</label>
+                  
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                  <%- if controller_name != 'sessions' %>
+                  <%= link_to "Return to login", new_session_path(resource_name) %><% end %>
+                  <%= f.submit "Reset Password",class:"btn btn-primary gradient-custom-2" %>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer text-center py-3">
+              <div class="small">
+                <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+                <%= link_to "Need an account? Sign up!", new_registration_path(resource_name) %><br />
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<div id="layoutAuthentication_footer">
+  <footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+      <div class="d-flex align-items-center justify-content-between small">
+        <div class="text-muted">Copyright &copy; The Lab care 2022</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          &middot;
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+<% end %>
